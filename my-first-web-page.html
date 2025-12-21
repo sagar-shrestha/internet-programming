@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Professional Portfolio</title>
+    <link rel="stylesheet" href="my-frist-css.css">
+</head>
+
+<body>
+<div class="container">
+    <header class="main-menu">
+        <h1 class="profile-name">Sagar Shrestha</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a class="active" href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <section id="about">
+        <h2 class="about-me">About Me</h2>
+        <img id="profile-pic-image" src="pp.jpeg" alt="Profile Picture">
+        <p>Hello! I am <strong>Sagar Shrestha</strong>. I am learning web development course. This portfolio
+            showcases my journey through the HTML Lab Manual.</p>
+    </section>
+
+    <section id="skills">
+        <h2 class="hobbies-skills">My Hobbies & Skills</h2>
+        <h3 class="list-h3">Technical Skills</h3>
+        <ol class="ol-list">
+            <li>HTML Structure</li>
+            <li>Semantic Layouts</li>
+            <li>Form Validation</li>
+            <li>Table Management</li>
+            <li>Hyperlink Optimization</li>
+        </ol>
+
+        <h3 class="list-h3">Personal Hobbies (Unordered)</h3>
+        <ul class="ul-list">
+            <li>Coding</li>
+            <li>Photography</li>
+            <li>Chess</li>
+        </ul>
+    </section>
+
+    <section id="projects" >
+        <h2 class="project-roadmap">Project Roadmap</h2>
+        <table class="project-table" border="1" cellpadding="5" align="left">
+            <thead>
+                <tr>
+                    <th>Project Name</th>
+                    <th>Technology</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Personal Blog</td>
+                    <td>HTML/CSS/JS</td>
+                    <td>Completed</td>
+                </tr>
+                <tr>
+                    <td>E-Commerce</td>
+                    <td>HTML/CSS/JS</td>
+                    <td>In-Progress</td>
+                </tr>
+                <tr>
+                    <td>Portfolio</td>
+                    <td>Sementic HTML</td>
+                    <td>Review</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <section id="contact">
+        <hr>
+        <h2 class="contact-me">Contact Me</h2>
+        <form class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name"><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email"><br><br>
+
+            <label for="message">Message:</label>
+            <textarea id="message" rows="4" cols="30"></textarea><br><br>
+
+            <button class="submit" type="button" onclick='document.getElementById'>Submit Details</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 My First Portfolio. Built with valid HTML5.</p>
+    </footer>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="my-form" method="post">
+        <h1>Rock Paper Scissors Game</h1>
+        <label for="player-a">Player A:</label>
+        <input type="text" id="player-a" name="player-a">
+        <label for="player-b">Player B:</label>
+        <input type="text" id="player-b" name="player-b">
+
+        <button type="button" onclick="predictScore()">Submit!!!!!</button>
+    </form>
+    <script>
+        let playerAScore = 0;
+        let playerBScore = 0;
+        let rock = 1;
+        let paper = 2;
+        let scissors = 3;
+        let playerASelection = 0;
+        let playerBSelection = 0;
+        let winner;
+
+        function predictScore() {
+
+            if ((document.forms["my-form"]["player-a"].value == "rock") && (document.forms["my-form"]["player-b"].value == "rock")) {
+                winner = "It's a Tie!";
+            } else if ((document.forms["my-form"]["player-a"].value == "rock") && (document.forms["my-form"]["player-b"].value == "paper")) {
+                winner = "Player B Wins!";
+                playerBScore++;
+            } else if ((document.forms["my-form"]["player-a"].value == "rock") && (document.forms["my-form"]["player-b"].value == "scissors")) {
+                winner = "Player A Wins!";
+                playerAScore++;
+            } else if ((document.forms["my-form"]["player-a"].value == "paper") && (document.forms["my-form"]["player-b"].value == "rock")) {
+                winner = "Player A Wins!";
+                playerAScore++;
+            } else if ((document.forms["my-form"]["player-a"].value == "paper") && (document.forms["my-form"]["player-b"].value == "paper")) {
+                winner = "It's a Tie!";
+            } else if ((document.forms["my-form"]["player-a"].value == "paper") && (document.forms["my-form"]["player-b"].value == "scissors")) {
+                winner = "Player B Wins!";
+                playerBScore++;
+            } else if ((document.forms["my-form"]["player-a"].value == "scissors") && (document.forms["my-form"]["player-b"].value == "rock")) {
+                winner = "Player B Wins!";
+                playerBScore++;
+            } else if ((document.forms["my-form"]["player-a"].value == "scissors") && (document.forms["my-form"]["player-b"].value == "paper")) {
+                winner = "Player A Wins!";
+                playerAScore++;
+            } else if ((document.forms["my-form"]["player-a"].value == "scissors") && (document.forms["my-form"]["player-b"].value == "scissors")) {
+                winner = "It's a Tie!";
+            } else {
+                winner = "Invalid Input! Please enter rock, paper, or scissors.";
+            }
+            alert(winner + "\nPlayer A Score: " + playerAScore + "\nPlayer B Score: " + playerBScore);}
+    </script>
+</body>
+
+</html>
